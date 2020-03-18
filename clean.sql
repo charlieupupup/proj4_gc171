@@ -6,19 +6,19 @@ DROP TABLE IF EXISTS STATE CASCADE;
 CREATE TABLE COLOR
 (
     COLOR_ID SERIAL PRIMARY KEY,
-    NAME varchar(256)
+    NAME varchar(1024)
 );
 
 CREATE TABLE STATE
 (
     STATE_ID SERIAL PRIMARY KEY,
-    NAME varchar(256)
+    NAME varchar(1024)
 );
 
 CREATE TABLE TEAM
 (
     TEAM_ID SERIAL PRIMARY KEY,
-    NAME varchar(256),
+    NAME varchar(1024),
     STATE_ID int,
     COLOR_ID int,
     WINS int,
@@ -32,8 +32,8 @@ CREATE TABLE PLAYER
     PLAYER_ID SERIAL PRIMARY KEY,
     TEAM_ID int,
     UNIFORM_NUM int,
-    FIRST_NAME varchar(256),
-    LAST_NAME varchar(256),
+    FIRST_NAME varchar(1024),
+    LAST_NAME varchar(1024),
     MPG int,
     PPG int,
     RPG int,
